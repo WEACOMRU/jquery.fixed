@@ -25,9 +25,8 @@
                 $shadow.css(element, $el.css(element));
             });
 
-            $shadow.hide();
-
             $el.before($shadow);
+            $shadow.hide();
 
             return $shadow;
         },
