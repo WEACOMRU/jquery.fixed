@@ -6,7 +6,7 @@
  *
  * https://github.com/bashkos/jquery.fixed
  *
- * Version: 1.0.0
+ * Version: 1.0.2
  */
 
 (function ($) {
@@ -19,7 +19,7 @@
             var $shadow = $('<div/>'),
                 style = ['marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'paddingTop', 'paddingRight',
                          'paddingBottom', 'paddingLEft', 'clear', 'float', 'position', 'left', 'right', 'top', 'bottom',
-                         'vertical-align', 'width', 'height', 'box-sizing', 'overflow', 'line-height'];
+                         'verticalAlign', 'width', 'height', 'boxSizing', 'overflow', 'lineHeight'];
 
             $(style).each(function (index, element) {
                 $shadow.css(element, $el.css(element));
@@ -66,7 +66,7 @@
             $(itemSet).each(function (index, item) {
                 var itemTop = getTop(item);
 
-                if (item.fixed && itemTop > scrollTop) {
+                if (item.fixed && itemTop >= scrollTop) {
                     updateItem(item, false);
                 } else if (!item.fixed && itemTop < scrollTop) {
                     updateItem(item, true);
