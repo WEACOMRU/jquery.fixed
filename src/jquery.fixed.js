@@ -94,7 +94,8 @@
                         }
                     };
 
-                    $el.data('fixedIndex', index);
+                    $el.data('fixedIndex', index)
+                      .css('transform', 'translate3d(0, 0, 0)');
                 }
 
                 itemSet[index].settings = $.extend(itemSet[index].settings, options);
